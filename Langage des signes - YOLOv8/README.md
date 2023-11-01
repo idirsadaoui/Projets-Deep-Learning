@@ -83,8 +83,12 @@ Langage_des_signes_Roboflow/
 |-- data.yaml
 ```
 
-L'entraînement est effectué sur [Google Colab]() avec un GPU T4
+L'entraînement est effectué sur Google Colab avec un GPU T4, en utilisant comme point de départ les poids du modèle yolov8m.pt disponibles dans le dossier `yolov8` en utilisant le code suivant :
 
-!yolo train data = ./Langage_des_signes/data.yaml model=yolov8m.pt epochs = 100
+```python
+!yolo train data = /Langage_des_signes/data.yaml model=yolov8m.pt epochs = 100
+```
+
+Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusion du jeu de données de test :
 
 
