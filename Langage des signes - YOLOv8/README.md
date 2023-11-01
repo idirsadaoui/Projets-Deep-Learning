@@ -5,7 +5,7 @@
       <img width="70%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/Amour.png"></a>
   </p>
   
-Ce projet à pour but d'explorer le modèle [YOLOv8](https://docs.ultralytics.com/models/yolov8/#overview) proposé par [Ultralytics](https://ultralytics.com), , en se concentrant plus particulièrement sur le modèle de détection d'objets.
+Ce projet à pour but d'explorer le modèle [YOLOv8](https://docs.ultralytics.com/models/yolov8/#overview) proposé par [Ultralytics](https://ultralytics.com), en se concentrant plus particulièrement sur le modèle de détection d'objets.
 
 L'idée générale est de détecter les 6 premières lettres de l'alphabet du langage des signes français dans le but d'effectuer des prédictions en temps réel avec la Webcam.
   
