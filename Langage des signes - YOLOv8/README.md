@@ -48,7 +48,7 @@ La labélisation du jeu de données est effectuée avec [Roboflow](https://robof
 
 Voici la répartition des classes après labélisation (sans augmentation de données) :
 
-<div align="left">
+<div align="center">
   <p>
       <img width="35%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/labels_repartition.jpg"></a>
   </p>
