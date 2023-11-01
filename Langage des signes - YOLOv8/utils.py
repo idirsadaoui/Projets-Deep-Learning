@@ -69,10 +69,13 @@ def capture_webcam_images(output_folder: str = 'captures_webcam',
 
 PATH = "./Langage des signes - YOLOv8/weights/Langage_signe_ABCDEF_yolov8.pt"
 CONF_THRESDOLD = 0.5
+PATH_GIF = "./Langage des signes - YOLOv8/data"
 
 
 def real_time_detections(model_path: str = PATH,
-                         conf_threshold: float = CONF_THRESDOLD):
+                         conf_threshold: float = CONF_THRESDOLD
+                         save_gif: bool = True,
+                         path_gif: str = ):
     # Initialise la webcam avec la résolution souhaitée
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, LARGEUR)  # Largeur de la vidéo
@@ -81,6 +84,8 @@ def real_time_detections(model_path: str = PATH,
     # Charge le modèle grâce au fichier poids .pt ayant les meilleurs
     # performances et résultant de l'entraînement
     model = YOLO(model_path)
+
+    frames = []
 
     while True:
         # Affiche l'image dans une fenêtre
@@ -107,6 +112,9 @@ def real_time_detections(model_path: str = PATH,
 
         cv2.imshow("Yolov8", frame)
 
+        if save_gif:
+            frames.append(Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+
         # Ferme la fenêtre si la touche 'q' est pressée
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -114,3 +122,7 @@ def real_time_detections(model_path: str = PATH,
     # Libère la webcam et ferme la fenêtre
     cap.release()
     cv2.destroyAllWindows()
+
+    if save_gif:
+      frames[0].save(os.path.join(path_gif, "LST.gif"), save_all=True, append_images=frames[1:], duration=100, loop=0)
+
