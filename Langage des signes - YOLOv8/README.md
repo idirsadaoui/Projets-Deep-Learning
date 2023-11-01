@@ -7,7 +7,7 @@
   
 Ce projet à pour but d'explorer le modèle [YOLOv8](https://docs.ultralytics.com/models/yolov8/#overview) proposé par [Ultralytics](https://ultralytics.com), , en se concentrant plus particulièrement sur le modèle de détection d'objets.
 
-L'idée générale est de détecter les 6 premières lettres de l'alphabet dans le but d'effectuer des prédictions en temps réel avec la Webcam.
+L'idée générale est de détecter les 6 premières lettres de l'alphabet du langage des signes français dans le but d'effectuer des prédictions en temps réel avec la Webcam.
   
 </div>
 
@@ -17,7 +17,7 @@ L'idée générale est de détecter les 6 premières lettres de l'alphabet dans 
 
 Les classes du jeu de données sont les 6 premières lettres de l'alphabet, à savoir A, B, C, D, E et F.
 
-Le jeu de données est construit grâce à la fonction `capture_webcam_images` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/utils.py)
+Le jeu de données est construit grâce à la fonction `capture_webcam_images` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/utils.py).
 
 `capture_webcam_images` prend en argument les variables suivantes :
 
@@ -35,5 +35,24 @@ Voici un aperçu des classes du jeu de données :
       <img width="80%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Apercu_dataset.png"></a>
   </p>
 </div>
+
+Le jeu de données complet est disponible sur ce [lien](https://universe.roboflow.com/idir-sadaoui-qgzta/langage-des-signes).
+
+## <div align="center">Labélisation</div>
+
+La labélisation du jeu de données est effectuée avec [Roboflow](https://roboflow.com) en plusieurs étapes :
+
+* Une bounding box est tracée sur chaque image autour du geste de la main.
+* Un label est attribué en fonction de la lettre de l'alphabet.
+* Une augmentation des données sur le jeu d'entraînement est effectuée, incluant des retournements horizontaux, des recadrages aléatoires, et l'ajout de bruit.
+
+Voici la répartition des classes après labélisation (sans augmentation de données) :
+
+<div align="center">
+  <p>
+      <img width="80%" src=""></a>
+  </p>
+</div>
+
 
 
