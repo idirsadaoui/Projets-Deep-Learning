@@ -104,7 +104,7 @@ Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusi
 
 ##
 
-## <div align="center"> Prédiction en temps réel </div>
+## <div align="center"> Prédictions en temps réel </div>
 
 La prédiction en temps réel est basée sur la fonction `real_time_detections` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/utils.py).
 
