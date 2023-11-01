@@ -73,7 +73,7 @@ PATH_GIF = "./Langage des signes - YOLOv8/data"
 
 
 def real_time_detections(model_path: str = PATH,
-                         conf_threshold: float = CONF_THRESDOLD
+                         conf_threshold: float = CONF_THRESDOLD,
                          save_gif: bool = True,
                          path_gif: str = "./Langage des signes - YOLOv8/data"):
     # Initialise la webcam avec la résolution souhaitée
