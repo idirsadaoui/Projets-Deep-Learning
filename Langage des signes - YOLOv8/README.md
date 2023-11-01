@@ -16,7 +16,7 @@ L'idée générale est de détecter les 6 premières lettres de l'alphabet dans 
 
 Les classes du jeu de données sont les 6 premières lettres de l'alphabet, à savoir A, B, C, D, E et F.
 
-Le jeu de données est construit grâce à la fonction `capture_webcam_images` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/utils.py).
+Le jeu de données est construit grâce à la fonction `capture_webcam_images` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/utils.py)
 
 `capture_webcam_images` prend en argument les variables suivantes :
 
@@ -27,5 +27,12 @@ Le jeu de données est construit grâce à la fonction `capture_webcam_images` d
 Cette fonction a pour but d'initialiser et d'ouvrir la webcam, puis de prendre des captures d'écran toutes les 2 secondes.
 Avant chaque capture d'écran, le geste correspondant à l'une des classes est effectué.
 
+Voici un aperçu des classes du jeu de données :
+
+<div align="center">
+  <p>
+      <img width="70%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Apercu_dataset.png"></a>
+  </p>
+</div>
 
 
