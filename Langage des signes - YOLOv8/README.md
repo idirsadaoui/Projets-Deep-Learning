@@ -32,7 +32,7 @@ Voici un aperçu des classes du jeu de données :
 
 <div align="center">
   <p>
-      <img width="80%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Apercu_dataset.png"></a>
+      <img width="85%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Apercu_dataset.png"></a>
   </p>
 </div>
 
@@ -48,11 +48,13 @@ La labélisation du jeu de données est effectuée avec [Roboflow](https://robof
 
 Voici la répartition des classes après labélisation (sans augmentation de données) :
 
-<div align="center">
+<div align="left">
   <p>
-      <img width="80%" src=""></a>
+      <img width="35%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/labels_repartition.jpg"></a>
   </p>
 </div>
+
+## <div align="center">Entraînement</div>
 
 
 
