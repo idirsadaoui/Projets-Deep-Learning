@@ -1,4 +1,4 @@
-# Langage des Signes - Détection de l'alphabet
+# <div align="center"> Langage des Signes - Détection de l'alphabet </div>
 
 <div align="center">
   <p>
