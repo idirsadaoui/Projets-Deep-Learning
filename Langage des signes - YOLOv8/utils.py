@@ -4,25 +4,28 @@ import time
 import threading
 from typing import Tuple
 from ultralytics import YOLO
+from PIL import Image
 
 #################################################
 #              CRÉATION DU DATASET              #
 #################################################
 
+
 def capture_webcam_images(output_folder: str = 'captures_webcam',
                           resolution: Tuple[int, int] = (640, 480),
                           classe: str = 'A'):
-                            
+
     """
-    Fonction qui a pour but d'initialiser et d'ouvrir la webcam, 
+    Fonction qui a pour but d'initialiser et d'ouvrir la webcam,
     puis de prendre des captures d'écran toutes les 2 secondes.
-    
+
     Args:
         output_folder (str): Nom du dossier dans lequel les données seront stockées.
-        resolution (Tuple[int, int]): Dimensions de la webcam et, par conséquent, aux dimensions des images du jeu de données.
+        resolution (Tuple[int, int]): Dimensions de la webcam et, par conséquent,
+                                      aux dimensions des images du jeu de données.
         classe (str): La classe de l'image.
     """
-                            
+
     # Initialise la webcam avec la résolution souhaitée
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, resolution[0])  # Largeur de la vidéo
@@ -76,20 +79,22 @@ def capture_webcam_images(output_folder: str = 'captures_webcam',
 
 def real_time_detections(model_path: str,
                          conf_threshold: float,
-                         save_gif: bool = True,
+                         save_gif: bool,
                          path_gif: str):
-                           
+
     """
-    Fonction qui a pour but  a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer des prédictions et détections
-    pour les 6 premières lettres de l'alphabet du langage des signes français.
-    
+    Fonction qui a pour but a pour but d'initialiser et d'ouvrir la webcam,
+    puis d'effectuer des prédictions et détectionspour les 6 premières
+    lettres de l'alphabet du langage des signes français.
+
     Args:
         model_path (str): Chemin du fichier de poids du modèle.
-        conf_threshold (float): Nombre compris entre 0 et 1, représentant le seuil de confiance minimum attendu pour les prédictions.
+        conf_threshold (float): Nombre compris entre 0 et 1, représentant le seuil
+                                de confiance minimum attendu pour les prédictions.
         save_gif (bool): Booléen servant à sauvegarder la vidéo au format gif.
         path_gif (str): Chemin dans lequel sera sauvegardé le gif.
     """
-                           
+
     # Initialise la webcam avec la résolution souhaitée
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)  # Largeur de la vidéo
@@ -138,5 +143,4 @@ def real_time_detections(model_path: str,
     cv2.destroyAllWindows()
 
     if save_gif:
-      frames[0].save(os.path.join(path_gif, "LST.gif"), save_all=True, append_images=frames[1:], duration=100, loop=0)
-
+        frames[0].save(os.path.join(path_gif, "LST.gif"), save_all=True, append_images=frames[1:], duration=100, loop=0)
