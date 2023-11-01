@@ -115,9 +115,9 @@ Cette fonction a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer 
 #### Utilisation de la fonction `real_time_detection`
 
 ```python
-real_time_prediction(model_path = "./weights/Langage_signe_ABCDEF_yolov8.pt",
+real_time_prediction(model_path = "./Langage des signes - YOLOv8/weights/Langage_signe_ABCDEF_yolov8.pt",
                      conf_threshold = 0.5,
                      save_gif = True,
-                     path_gif = "./Support")
+                     path_gif = "./Langage des signes - YOLOv8/Support")
 ```
 
