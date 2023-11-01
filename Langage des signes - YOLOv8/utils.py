@@ -5,17 +5,24 @@ import threading
 from typing import Tuple
 from ultralytics import YOLO
 
-LARGEUR = 480
-HAUTEUR = 640
-
-
 #################################################
 #              CRÉATION DU DATASET              #
 #################################################
 
 def capture_webcam_images(output_folder: str = 'captures_webcam',
-                          resolution: Tuple[int, int] = (LARGEUR, HAUTEUR),
+                          resolution: Tuple[int, int] = (640, 480),
                           classe: str = 'A'):
+                            
+    """
+    Fonction qui a pour but d'initialiser et d'ouvrir la webcam, 
+    puis de prendre des captures d'écran toutes les 2 secondes.
+    
+    Args:
+        output_folder (str): Nom du dossier dans lequel les données seront stockées.
+        resolution (Tuple[int, int]): Dimensions de la webcam et, par conséquent, aux dimensions des images du jeu de données.
+        classe (str): La classe de l'image.
+    """
+                            
     # Initialise la webcam avec la résolution souhaitée
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, resolution[0])  # Largeur de la vidéo
@@ -67,19 +74,26 @@ def capture_webcam_images(output_folder: str = 'captures_webcam',
 #      PRÉDICTION EN DIRECT SUR UNE WEBCAM      #
 #################################################
 
-PATH = "./Langage des signes - YOLOv8/weights/Langage_signe_ABCDEF_yolov8.pt"
-CONF_THRESDOLD = 0.5
-PATH_GIF = "./Langage des signes - YOLOv8/data"
-
-
-def real_time_detections(model_path: str = PATH,
-                         conf_threshold: float = CONF_THRESDOLD,
+def real_time_detections(model_path: str,
+                         conf_threshold: float,
                          save_gif: bool = True,
-                         path_gif: str = "./Langage des signes - YOLOv8/data"):
+                         path_gif: str):
+                           
+    """
+    Fonction qui a pour but  a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer des prédictions et détections
+    pour les 6 premières lettres de l'alphabet du langage des signes français.
+    
+    Args:
+        model_path (str): Chemin du fichier de poids du modèle.
+        conf_threshold (float): Nombre compris entre 0 et 1, représentant le seuil de confiance minimum attendu pour les prédictions.
+        save_gif (bool): Booléen servant à sauvegarder la vidéo au format gif.
+        path_gif (str): Chemin dans lequel sera sauvegardé le gif.
+    """
+                           
     # Initialise la webcam avec la résolution souhaitée
     cap = cv2.VideoCapture(0)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, LARGEUR)  # Largeur de la vidéo
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, HAUTEUR)  # Hauteur de la vidéo
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)  # Largeur de la vidéo
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)  # Hauteur de la vidéo
 
     # Charge le modèle grâce au fichier poids .pt ayant les meilleurs
     # performances et résultant de l'entraînement
