@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-      <img width="70%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Amour.png"></a>
+      <img width="70%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/Amour.png"></a>
   </p>
   
 Ce projet à pour but d'explorer le modèle [YOLOv8](https://docs.ultralytics.com/models/yolov8/#overview) proposé par [Ultralytics](https://ultralytics.com), , en se concentrant plus particulièrement sur le modèle de détection d'objets.
@@ -32,7 +32,7 @@ Voici un aperçu des classes du jeu de données :
 
 <div align="center">
   <p>
-      <img width="85%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Apercu_dataset.png"></a>
+      <img width="85%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/Apercu_dataset.png"></a>
   </p>
 </div>
 
@@ -53,7 +53,7 @@ Voici la répartition des classes après labélisation (sans augmentation de don
 
 <div align="center">
   <p>
-      <img width="45%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/labels_repartition.jpg"></a>
+      <img width="45%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/labels_repartition.jpg"></a>
   </p>
 </div>
 
@@ -95,7 +95,7 @@ Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusi
 
 <div align="center">
   <p>
-      <img width="95%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/resultats_entrainement.png"></a>
+      <img width="95%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/resultats_entrainement.png"></a>
   </p>
 </div>
 
