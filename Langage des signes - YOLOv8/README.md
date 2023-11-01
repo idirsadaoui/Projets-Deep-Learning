@@ -99,16 +99,21 @@ Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusi
   </p>
 </div>
 
-## <div align="center"> Prédiction sur des images </div>
+## <div align="center"> Prédiction en temps réel </div>
 
-#### Load du modèle
+La prédiction en temps réel est basée sur la fonction `real_time_detections` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/utils.py).
+
+`real_time_detections` prend en argument les variables suivantes :
+
+* `model_path` est une chaîne de caractères correspondant au chemin du fichier de poids du modèle.
+* `conf_threshold` est un nombre compris entre 0 et 1, représentant le seuil de confiance minimum attendu pour les prédictions.
+
+Cette fonction a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer des prédictions et détections pour les 6 premières lettres de l'alphabet du langage des signes français.
+
+#### Utilisation de la fonction `real_time_detection`
 
 ```python
-from ultralytics import YOLO
-
-model = YOLO("./weights/Langage_signe_ABCDEF_yolov5.pt")
+real_time_prediction(model_path = "./weights/Langage_signe_ABCDEF_yolov8.pt",
+                     conf_threshold = 0.5)
 ```
-Fichiers poids aussi disponible sur ce [lien]("https://drive.google.com/drive/folders/1H59D0Ss9iWbfDpSmEaZdrYxt7cz3H3pM")
-
-
 
