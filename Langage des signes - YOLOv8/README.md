@@ -130,7 +130,7 @@ real_time_prediction(model_path = "./Langage des signes - YOLOv8/weights/Langage
 
 <div align="center">
   <p>
-      <img width="65%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/LSF.GIF"></a>
+      <img width="60%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/LSF.GIF"></a>
   </p>
 </div>
 
