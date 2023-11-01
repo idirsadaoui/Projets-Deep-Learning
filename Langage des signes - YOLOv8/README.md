@@ -11,7 +11,7 @@ L'idée générale est de détecter les 6 premières lettres de l'alphabet du la
   
 </div>
 
-
+## 
 
 ## <div align="center">Création du jeu de données</div>
 
@@ -38,6 +38,8 @@ Voici un aperçu des classes du jeu de données :
 
 Le jeu de données complet est disponible sur ce [lien](https://universe.roboflow.com/idir-sadaoui-qgzta/langage-des-signes).
 
+##
+
 ## <div align="center">Labélisation</div>
 
 La labélisation du jeu de données est effectuée avec [Roboflow](https://roboflow.com) en plusieurs étapes :
@@ -56,6 +58,8 @@ Voici la répartition des classes après labélisation (sans augmentation de don
       <img width="45%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/labels_repartition.jpg"></a>
   </p>
 </div>
+
+## 
 
 ## <div align="center">Entraînement</div>
 
@@ -97,6 +101,8 @@ Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusi
       <img width="95%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/resultats_entrainement.png"></a>
   </p>
 </div>
+
+##
 
 ## <div align="center"> Prédiction en temps réel </div>
 
