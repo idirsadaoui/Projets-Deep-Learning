@@ -46,6 +46,8 @@ La labélisation du jeu de données est effectuée avec [Roboflow](https://robof
 * Un label est attribué en fonction de la lettre de l'alphabet.
 * Une augmentation des données sur le jeu d'entraînement est effectuée, incluant des retournements horizontaux, des recadrages aléatoires, et l'ajout de bruit.
 
+Référez-vous au lien du jeu de données complet pour obtenir davantage de précisions.
+
 Voici la répartition des classes après labélisation (sans augmentation de données) :
 
 <div align="center">
