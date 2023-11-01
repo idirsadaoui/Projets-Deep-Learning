@@ -32,7 +32,7 @@ Voici un aperçu des classes du jeu de données :
 
 <div align="center">
   <p>
-      <img width="85%" src=""></a>
+      <img width="85%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/Apercu_dataset.png"></a>
   </p>
 </div>
 
