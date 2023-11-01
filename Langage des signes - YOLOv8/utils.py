@@ -143,4 +143,4 @@ def real_time_detections(model_path: str,
     cv2.destroyAllWindows()
 
     if save_gif:
-        frames[0].save(os.path.join(path_gif, "LST.gif"), save_all=True, append_images=frames[1:], duration=100, loop=0)
+        frames[0].save(os.path.join(path_gif, "LST.gif"), save_all=True, append_images=frames[1:], duration=175, loop=0)
