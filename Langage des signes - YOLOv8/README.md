@@ -45,6 +45,7 @@ La labélisation du jeu de données est effectuée avec [Roboflow](https://robof
 * Une bounding box est tracée sur chaque image autour du geste de la main.
 * Un label est attribué en fonction de la lettre de l'alphabet.
 * Une augmentation des données sur le jeu d'entraînement est effectuée, incluant des retournements horizontaux, des recadrages aléatoires, et l'ajout de bruit.
+* Un redimensionnement des images en 640x640 pixels est effectué pour faciliter l'entraînement du modèle YOLO.
 
 Référez-vous au lien du jeu de données complet pour obtenir davantage de précisions.
 
@@ -58,5 +59,32 @@ Voici la répartition des classes après labélisation (sans augmentation de don
 
 ## <div align="center">Entraînement</div>
 
+Le jeu de données est téléchargé au format YOLOv8 sur Roboflow et se présente de la façon suivante :
+
+
+
+```lua
+Langage_des_signes_Roboflow/
+|-- train/
+|   |-- images/
+|       |-- capture_20231003-144600_A.png
+|       |-- capture_20231003-144601_A.png
+|       |-- ...
+|   |-- labels/
+|       |-- capture_20231003-144600_A.txt
+|       |-- capture_20231003-144601_A.txt
+|       |-- ...
+|-- test/
+|   |-- images/
+|   |-- labels/
+|-- valid/
+|   |-- images/
+|   |-- labels/
+|-- data.yaml
+```
+
+L'entraînement est effectué sur [Google Colab]() avec un GPU T4
+
+!yolo train data = ./Langage_des_signes/data.yaml model=yolov8m.pt epochs = 100
 
 
