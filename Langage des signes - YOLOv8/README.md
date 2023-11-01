@@ -107,6 +107,8 @@ La prédiction en temps réel est basée sur la fonction `real_time_detections` 
 
 * `model_path` est une chaîne de caractères correspondant au chemin du fichier de poids du modèle.
 * `conf_threshold` est un nombre compris entre 0 et 1, représentant le seuil de confiance minimum attendu pour les prédictions.
+* `save_gif` est un booléen servant à sauvegarder la vidéo au format gif.
+* `path_gif` est une chaîne de caractères correspondant au chemin dans lequel sera sauvegardé le gif.
 
 Cette fonction a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer des prédictions et détections pour les 6 premières lettres de l'alphabet du langage des signes français.
 
@@ -114,6 +116,8 @@ Cette fonction a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer 
 
 ```python
 real_time_prediction(model_path = "./weights/Langage_signe_ABCDEF_yolov8.pt",
-                     conf_threshold = 0.5)
+                     conf_threshold = 0.5,
+                     save_gif = True,
+                     path_gif = "./Support")
 ```
 
