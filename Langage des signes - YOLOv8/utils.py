@@ -113,7 +113,7 @@ def real_time_detections(model_path: str = PATH,
         cv2.imshow("Yolov8", frame)
 
         if save_gif:
-            frames.append(Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+            frames.append(Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)))
 
         # Ferme la fenêtre si la touche 'q' est pressée
         if cv2.waitKey(1) & 0xFF == ord('q'):
