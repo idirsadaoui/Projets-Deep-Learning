@@ -6,7 +6,7 @@ from typing import Tuple
 from ultralytics import YOLO
 
 LARGEUR = 480
-HAUTEUR = 480
+HAUTEUR = 640
 
 
 #################################################
