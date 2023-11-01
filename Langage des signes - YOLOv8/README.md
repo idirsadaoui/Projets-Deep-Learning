@@ -85,6 +85,8 @@ Langage_des_signes_Roboflow/
 
 L'entraînement est effectué sur Google Colab avec un GPU T4, en utilisant comme point de départ les poids du modèle yolov8m.pt disponibles dans le dossier `yolov8` en utilisant le code suivant :
 
+#### code
+
 ```python
 !yolo train data = /Langage_des_signes/data.yaml model=yolov8m.pt epochs = 100
 ```
@@ -99,12 +101,14 @@ Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusi
 
 ## <div align="center"> Prédiction sur des images </div>
 
-Load du modèle
+#### Load du modèle
 
 ```python
 from ultralytics import YOLO
 
 model = YOLO("./weights/Langage_signe_ABCDEF_yolov5.pt")
 ```
+Fichiers poids aussi disponible sur ce [lien]("https://drive.google.com/drive/folders/1H59D0Ss9iWbfDpSmEaZdrYxt7cz3H3pM")
+
 
 
