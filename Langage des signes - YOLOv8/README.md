@@ -91,4 +91,20 @@ L'entraînement est effectué sur Google Colab avec un GPU T4, en utilisant comm
 
 Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusion du jeu de données de test :
 
+<div align="center">
+  <p>
+      <img width="95%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/data/resultats_entrainement.png"></a>
+  </p>
+</div>
+
+## <div align="center"> Prédiction sur des images </div>
+
+Load du modèle
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("./weights/Langage_signe_ABCDEF_yolov5.pt")
+```
+
 
