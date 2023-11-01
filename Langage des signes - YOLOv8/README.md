@@ -12,6 +12,7 @@ L'idée générale est de détecter les 6 premières lettres de l'alphabet dans 
 </div>
 
 
+
 ## <div align="center">Création du jeu de données</div>
 
 Les classes du jeu de données sont les 6 premières lettres de l'alphabet, à savoir A, B, C, D, E et F.
