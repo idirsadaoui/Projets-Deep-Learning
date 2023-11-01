@@ -62,7 +62,6 @@ Voici la répartition des classes après labélisation (sans augmentation de don
 Le jeu de données est téléchargé au format YOLOv8 sur Roboflow et se présente de la façon suivante :
 
 
-
 ```lua
 Langage_des_signes_Roboflow/
 |-- train/
@@ -120,4 +119,12 @@ real_time_prediction(model_path = "./Langage des signes - YOLOv8/weights/Langage
                      save_gif = True,
                      path_gif = "./Langage des signes - YOLOv8/Support")
 ```
+
+#### Prédictions effectuées avec une webcam
+
+<div align="center">
+  <p>
+      <img width="65%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Langage%20des%20signes%20-%20YOLOv8/support/LSF.GIF"></a>
+  </p>
+</div>
 
