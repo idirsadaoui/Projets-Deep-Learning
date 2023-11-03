@@ -77,10 +77,10 @@ Langage_des_signes_Roboflow/
 |       |-- capture_20231003-144600_A.txt
 |       |-- capture_20231003-144601_A.txt
 |       |-- ...
-|-- test/
+|-- valid/
 |   |-- images/
 |   |-- labels/
-|-- valid/
+|-- test/
 |   |-- images/
 |   |-- labels/
 |-- data.yaml
