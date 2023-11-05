@@ -91,7 +91,7 @@ L'entraînement est effectué sur Google Colab avec un GPU T4, en utilisant comm
 #### code
 
 ```python
-!yolo train data = /Langage_des_signes/data.yaml model=yolov8m.pt epochs = 100
+!yolo train data = ./data.yaml model=yolov8m.pt epochs = 100
 ```
 
 Voici les résultats de l'entraînement pour 100 epochs et la matrice de confusion du jeu de données de test :
@@ -120,10 +120,10 @@ Cette fonction a pour but d'initialiser et d'ouvrir la webcam, puis d'effectuer 
 #### Utilisation de la fonction `real_time_detection`
 
 ```python
-real_time_prediction(model_path = "./Langage des signes - YOLOv8/weights/Langage_signe_ABCDEF_yolov8.pt",
+real_time_prediction(model_path = "./weights/Langage_signe_ABCDEF_yolov8.pt",
                      conf_threshold = 0.5,
                      save_gif = True,
-                     path_gif = "./Langage des signes - YOLOv8/Support")
+                     path_gif = "./support")
 ```
 
 #### Prédictions effectuées avec une webcam
