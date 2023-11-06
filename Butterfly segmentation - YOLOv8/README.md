@@ -144,7 +144,7 @@ La prédiction est réalisée par la fonction `Visualization` avec l'argument `p
 
 Le modèle doit être importer au préalable dans une variable nommée `model` avant de lancer les prédictions avec `Visualization`.
 
-#### Utilisation de `Visualization` pour la prédiction : 
+#### Utilisation de `Visualization` pour la prédiction
 
 ```python
 model = YOLO("./weights/butterfly_seg.pt")
