@@ -19,18 +19,18 @@ L'idée générale est de segmenter des images de papillons afin de prédire les
 
 ##
 
-## <div align="center">Jeu de données</div>
+## <div align="center">Jeu de données et annotations</div>
 
-Le jeu de données a été mis à disposition par [phucthaiv02](https://www.kaggle.com/phucthaiv02) sur Kaggle.
+Le jeu de données [Butterfly Image Classification](https://www.kaggle.com/datasets/phucthaiv02/butterfly-image-classification/data) a été mis à disposition par [phucthaiv02](https://www.kaggle.com/phucthaiv02) sur Kaggle.
 
 Il est constitué de plus de 9200 images de papillons au format (224x224), réparties en 75 classes, parmi lesquelles 550 ont été sélectionnées pour ce projet.
 
 Les annotations du jeu de données ont été effectuées avec [Roboflow](https://roboflow.com) en deux étapes :
 
-* Une mask est tracé sur chaque image autour du papillon.
+* Un masque est tracé sur chaque image autour du papillon.
 * Une augmentation des données sur le jeu d'entraînement est effectuée,  incluant des retournements horizontaux et verticaux, des rotations aléatoires, des recadrages aléatoires, l'ajout de bruit, ainsi que des modifications de teintes sur les images.
 
-Pour plus de précision, le jeu de données complet est accessible via ce [lien](https://www.kaggle.com/datasets/phucthaiv02/butterfly-image-classification/data).
+Pour plus de précisions concernant l'annotation, veuillez vous référer à ce [lien](https://universe.roboflow.com/idir-sadaoui-qgzta/butterfly-smcqg/dataset/1).
 
 Le jeu de données est téléchargé au format COCO JSON.
 
@@ -45,9 +45,7 @@ Voici un aperçu du jeu de données :
 
 ##
 
-## <div align="center">Annotations</div>
-
-### Conversion COCO JSON vers YOLO
+## <div align="center">Conversion COCO JSON vers YOLO</div>
 
 Une conversion des annotations (en format .json) est nécessaire pour l'entraînement du modèle.
 
@@ -100,7 +98,9 @@ Butterfly_segmentation_Roboflow/
 
 De plus, le fichier `data.yaml` est créé avec les instructions nécessaires pour assurer le bon fonctionnement de la phase d'entraînement.
 
-### Visualisation des données
+##
+
+## <div align="center">Visualisation</div>
 
 La visualisation des données se fait grâce à la fonction `Visualization` du fichier [utils.py](https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Butterfly%20segmentation%20-%20YOLOv8/utils.py).
 
