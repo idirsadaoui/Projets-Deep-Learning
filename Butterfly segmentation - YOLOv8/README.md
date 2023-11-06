@@ -93,7 +93,7 @@ La visualisation des données se fait grâce à la fonction `Visualization` du f
 
 `Visualization` prend en argument les variables suviantes :
 
-* `images_abs_path` est une chaîne de caractère ou une liste de chaîne de caractère correspondant au chemin des images.
+* `images_abs_path` est une chaîne de caractère ou une liste de chaînes de caractères correspondant au chemin des images.
 * `predictions` est un booléen servant à visualiser les prédictions sur des images.
 
 Cette fonction a pour but de visualiser les images du jeu de données avec leur masque associé ou le masque prédit.
@@ -101,6 +101,8 @@ Cette fonction a pour but de visualiser les images du jeu de données avec leur 
 #### Utilisation de `Visualization` pour la visualisation du jeu de données :
 
 ```python
+from utils import Visualization
+
 images_list = [./train/images/Images_100.jpg,
                ./train/images/Images_101.jpg,
                ./train/images/Images_102.jpg,
@@ -108,11 +110,12 @@ images_list = [./train/images/Images_100.jpg,
 
 Visualization(images_abs_path = images_list)
 ```
+
 #### Résultats
 
 <div align="center">
   <p>
-      <img width="90%" src=""></a>
+      <img width="90%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Butterfly%20segmentation%20-%20YOLOv8/support/visualisation_dataset.png"></a>
   </p>
 </div>
 
@@ -120,6 +123,38 @@ Visualization(images_abs_path = images_list)
 
 ## <div align="center">Entraînement</div>
 
+L'entraînement est effectué sur Google Colab avec un GPU T4, en utilisant comme point de départ les poids du modèle `yolo8n-seg.pt` disponibles dans le dossier `weights` en utilisant le code suivant :
 
+#### code
 
+```python
+from ultralytics import YOLO
+
+model = YOLO("./weights/yolo8n-seg.pt")
+
+results = model.train(data='./data.yaml', epochs=400, imgsz=224)
+```
+Entraînement arrêté à l'epoch 128, car pas d'amélioration notable durant les 50 epochs précedentes.
+
+##
+
+## <div align="center">Prédictions</div>
+
+La prédiction est réalisée par la fonction `Visualization` avec l'argument `predictions = True`.
+
+Le modèle doit être importer au préalable dans une variable nommée `model` avant de lancer les prédictions avec `Visualization`.
+
+#### Utilisation de `Visualization` pour la prédiction : 
+
+```python
+model = YOLO("./weights/butterfly_seg.pt")
+
+images_list = [./test/Images_100.jpg,
+               ./test/Images_101.jpg,
+               ./test/Images_102.jpg,
+               ./test/Images_103.jpg]
+
+Visualization(images_abs_path = images_list
+              predictions = True)
+```
 
