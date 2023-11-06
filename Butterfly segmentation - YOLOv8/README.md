@@ -19,7 +19,7 @@ L'idée générale est de segmenter des images de papillons afin de prédire les
 
 ##
 
-## <div align="center">Jeu de données et annotations</div>
+## <div align="center">Jeu de données</div>
 
 Le jeu de données a été mis à disposition par [phucthaiv02](https://www.kaggle.com/phucthaiv02) sur Kaggle.
 
@@ -30,9 +30,22 @@ Les annotations du jeu de données ont été effectuées avec [Roboflow](https:/
 * Une mask est tracé sur chaque image autour du papillon.
 * Une augmentation des données sur le jeu d'entraînement est effectuée,  incluant des retournements horizontaux et verticaux, des rotations aléatoires, des recadrages aléatoires, l'ajout de bruit, ainsi que des modifications de teintes sur les images.
 
-Pour plus de précision, le jeu de données complet est accessible via ce [lien](https://universe.roboflow.com/idir-sadaoui-qgzta/butterfly-smcqg/dataset/1).
+Pour plus de précision, le jeu de données complet est accessible via ce [lien](https://www.kaggle.com/datasets/phucthaiv02/butterfly-image-classification/data).
 
 Le jeu de données est téléchargé au format COCO JSON.
+
+Voici un aperçu du jeu de données :
+
+<div align="center">
+  <p>
+      <img width="90%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Butterfly%20segmentation%20-%20YOLOv8/support/Apercu_dataset.png"></a>
+  </p>
+</div>
+
+
+##
+
+## <div align="center">Annotations</div>
 
 ### Conversion COCO JSON vers YOLO
 
@@ -149,12 +162,22 @@ Le modèle doit être importer au préalable dans une variable nommée `model` a
 ```python
 model = YOLO("./weights/butterfly_seg.pt")
 
-images_list = [./test/Images_100.jpg,
-               ./test/Images_101.jpg,
-               ./test/Images_102.jpg,
-               ./test/Images_103.jpg]
+images_list = [./test/Images_1007.jpg,
+               ./test/Images_1024.jpg,
+               ./test/Images_1082.jpg,
+               ./test/Images_1040.jpg,
+               ./test/Images_1059.jpg,
+               ./test/Images_1069.jpg]
 
 Visualization(images_abs_path = images_list
               predictions = True)
 ```
+
+#### Résultats
+
+<div align="center">
+  <p>
+      <img width="90%" src="https://github.com/idirsadaoui/Projets-Deep-Learning/blob/main/Butterfly%20segmentation%20-%20YOLOv8/support/pred.png"></a>
+  </p>
+</div>
 
