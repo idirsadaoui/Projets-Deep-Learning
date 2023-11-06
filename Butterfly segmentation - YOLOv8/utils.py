@@ -99,7 +99,7 @@ model_weights = "./path_to_the_model_weights"
 model = YOLO(model_weights)
 
 def Visualization(images_abs_path: Union[str, list],
-                                   predictions: bool = False):
+                  predictions: bool = False):
 
     """
     La fonction a pour but de visualiser les images du jeu de données
